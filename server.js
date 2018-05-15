@@ -1,7 +1,11 @@
-import express from 'express';
-import path from 'path';
-import bodyParser from 'body-parser';
+//import express from 'express';
+//import path from 'path';
+//import bodyParser from 'body-parser';
 
+
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser')
 const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io').listen(server);
@@ -58,3 +62,4 @@ io.sockets.on('connection',(socket) => {
 app.get('/', (req, res) => {
    res.sendFile(__dirname + '/index.html');
 });
+
